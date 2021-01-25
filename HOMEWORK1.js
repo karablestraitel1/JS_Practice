@@ -24,7 +24,7 @@ let user = {
 		marriageStatus: undefined,
 		amountOfChildren: null
 	};
-console.log (typeof age);
+
 //task5
 
 let isAdult = confirm("Have you reached adulthood?");
