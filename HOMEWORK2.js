@@ -109,16 +109,16 @@ if (time >= 23 && x < 5) {
 let x = new Date();
 time = x.getHours()
 console.log(time);
-if (time >= 23 || time < 5) {
+if (time >= 23 && time < 5) {
     alert("Доброї ночі");
-} else if (time >= 5 || time < 11) {
-    alert("Доброго ранку")
-} else if (time >=11 || time < 17) {
-    alert("Доброго дня")
-} else if (time >= 17 || time < 23) {
-    alert("Доброго вечора")
+} else if (time >= 5 && time < 11) {
+    alert("Доброго ранку");
+} else if (time >= 11 && time < 17) {
+    alert("Доброго дня");
+} else if (time >= 17 && time < 23) {
+    alert("Доброго вечора");
 } else {
-    alert("Неправильний час!")
+    alert("Неправильний час!");
 }
 
 let x = new Date();
