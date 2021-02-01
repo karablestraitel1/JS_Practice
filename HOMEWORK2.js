@@ -75,8 +75,6 @@ let y = 1 * prompt("Enter the lenght of B side of the triangle");
 let z = 1 * prompt("Enter the lenght of C side of the triangle");
 let p = ((x + y + z) / 2);
 let triangleArea = (p * (p - x) * (p - y) * (p - z)) ** (1/2);
-console.log(p);
-console.log(triangleArea);
 if (x + y <= z || y + z <= x || z + x <= y) {
     console.log("Incorrect data");
 } else {
