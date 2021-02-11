@@ -1,0 +1,114 @@
+<!--task1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="test">First</div>
+    <script>
+        document.body.firstElementChild.innerHTML = 'Last';
+        </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="test">First</div>
+    <script>
+        document.body.firstElementChild.innerHTML = 'Last'; // DIV
+        </script>
+</body>
+</html>
+
+<!--task2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <img class="image" src="dog.jpg">
+    <script>
+        document.querySelector('img').id = "new_id";
+        new_id.setAttribute('src', 'cat.jpg');
+
+    </script>
+</body>
+</html>
+
+<!--task3-->
+
+<body>
+	<h2>Article header</h2>      
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+    <p>Another text</p>
+    <script>
+    let allSelectors = [0, 1, 2, 3]
+    for (j = 0; j < allSelectors.lenght; j++) {
+    }   
+    let bodyNodes = text.querySelectorAll('p'); for (let i = 0; i < bodyNodes.length; i++) {
+
+        console.log(bodyNodes[i].innerHTML); // Text DIV Text SCRIPT
+          }
+    </script>
+    </body>
+
+
+<!--task4-->
+
+поки не готово
+
+
+<!--task5-->
+
+<body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+<script>
+    let greenHeader = document.body.firstElementChild;
+    let firstPar = myDiv.firstElementChild;
+    let italicText = myDiv.lastElementChild;
+    let redText = myDiv.childNodes[3];
+    let underlineText = myDiv.childNodes[5];
+    let horizontalText = document.getElementById('myList');
+    let invisibleText = document.body.querySelector('span');
+    greenHeader.style.background = 'green';
+    firstPar.style.fontWeight='700';
+    italicText.style.fontStyle='italic';
+    redText.style.color='red';
+    underlineText.style.textDecoration='underline';
+    horizontalText.style.display='flex';
+    horizontalText.style.listStyle='none';
+    listNone.style.color='blue';
+    invisibleText.style.opacity='0';
+</script>
+</body>
+
+<!--task6-->
+
+поки не готово
+
+
+<!--task7-->
+
+
+поки не готово
