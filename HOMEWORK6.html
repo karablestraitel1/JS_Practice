@@ -63,9 +63,29 @@
 
 
 <!--task4-->
+<!--task4.1-->
 
-поки не готово
+<body>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <script>
+      let elem1 = document.getElementById('list').firstElementChild;
+      let elem2 = document.getElementById('list').lastElementChild;
+      let elem3 = document.getElementById('list').children[1];
+      let elem4 = document.getElementById('list').children[2].nextElementSibling;
+      let elem5 = document.getElementById('list').children[3].previousElementSibling;
+      alert(elem1.innerHTML + elem2.innerHTML + elem3.innerHTML + elem4.innerHTML + elem5.innerHTML);
+    </script>
+</body>
 
+<!--task4.2-->
+
+Пробував створити новий масив зі списку, вивести значення та переставити їх, але масив не получається. Тому другого варіанту я не зробив.
 
 <!--task5-->
 
@@ -105,10 +125,32 @@
 
 <!--task6-->
 
-поки не готово
-
+<body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+        <script>
+          document.getElementById('input1').value = prompt('Enter the message #1');
+          document.getElementById('input2').value = prompt('Enter the message #2');
+          let writeMessage1 = document.getElementById('input1');
+          let writeMessage2 = document.getElementById('input2');
+          let parentInput = writeMessage2.parentNode;
+          parentInput.insertBefore(writeMessage2, writeMessage1);
+        </script>
+  </body>
 
 <!--task7-->
 
 
-поки не готово
+<body>
+    <script>
+      let main = document.createElement('main');
+      let div = document.createElement('div');
+      let paragraph = document.createElement('p');
+      main.className = "mainClass check item";
+      div.id = 'myDiv';
+      paragraph.innerHTML = 'First paragraph';
+      document.body.append(main);
+      main.append(div);
+      div.append(paragraph);
+    </script>
+</body>
