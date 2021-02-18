@@ -1,0 +1,189 @@
+<!--task1-->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<script>
+			let newWindow;
+
+function openWin() {
+	newWindow = window.open("", "", "width=300, height=300");
+}
+
+function resizeWin() {
+	newWindow.resizeTo(500, 500);
+}
+
+function removeWin() {
+	newWindow.moveTo(200, 200);
+}
+
+function closeWin() {
+	newWindow.close();
+}
+
+openWin();
+setTimeout(resizeWin, 2000);
+setTimeout(removeWin, 4000);
+setTimeout(closeWin, 6000);
+	</script>
+</body>
+</html>
+
+<!--task2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id ='text'>I learning JavaScript events!</p> 
+    <div>
+        <button>Change style!</button>
+    </div>
+    <script>
+        document.querySelector("button").onclick = function() {
+            let orangeColor = document.getElementById("text");
+            orangeColor.style.color = 'red';
+            orangeColor.style.fontSize = '20px';
+            orangeColor.style.fontFamily = 'Comic Sans MS';
+        }
+    </script>
+</body>
+</html>
+
+<!--task3-->
+
+<body>
+    <button id='button1'>Button1</button>
+    <button id='button2'>Button2</button>
+    <button id='button3'>Button3</button>
+    <a id='link' href="#">Link</a>
+    <script>
+        document.getElementById('button1').onclick = function blueBack() {
+            document.body.style.backgroundColor='blue';
+        }   
+
+        document.getElementById('button2').ondblclick = function roseBack() {
+            document.body.style.backgroundColor='deeppink';
+        } 
+        
+        document.getElementById('button3').onmousedown = function roseBack() {
+            document.body.style.backgroundColor='brown';
+        } 
+        
+        document.getElementById('button3').onmouseup = function roseBack() {
+            document.body.style.backgroundColor='#fff';
+        } 
+
+        document.getElementById('link').onmouseover = function hoverOnLink() {
+            document.body.style.backgroundColor='yellow';
+        }
+        document.getElementById('link').onmouseout = function hoverOutLink() {
+            document.body.style.backgroundColor='#fff';
+        }
+    </script>
+</body>
+
+<!--task4-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  overflow: auto;
+  z-index: 1;
+}
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">item#1</a>
+    <a href="#">item#2</a>
+    <a href="#">item#3</a>
+  </div>
+</div>
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+document.onclick = function( e ) {
+    var tag = e.target;
+    if( tag.tagName == "a" ) {
+      tag.remove();
+  } }
+
+</script>
+
+</body>
+</html>
+
+<!--task5-->
+5. Реалізуйте програму, яка по натисканню на кнопку виводитиме повідомлення 
+"I was pressed!", при наведенні на кнопку виводитиме повідомлення "Mouse on me!", а при відведенні курсора миші виводитиме повідомлення "Mouse is not on me!".
+
+Приклад роботи:
+
+
+<!--task6-->
+6. Реалізуйте програму, яка відслідковуватиме зміну розміру (ширини і висоти) вікна браузера і виводитиме на поточну сторінку при її розтязі/стисканні відповідні значення.
+
+
+
+<!--task7-->
+7. На сторінці потрібно реалізувати 2 випадаючих списки. У першому містяться назви країн, у другому – назви міст. Реалізувати роботу таким чином, щоб коли вибирається з лівого випадаючого списку певна країна - в правому випадаючому  списку з'являлися міста цієї країни. Список міст формується динамічно, через JavaScript. Також потрібно нижче вивести назву обраної країни і місто.
+
+
+Код HTML-сторінки:
+<select name="country" id="country">
+	<option value="ger">Germany</option>
+	<option value="usa">USA</option>
+	<option value="ukr">Ukraine</option>
+</select>
+                    
+<select name="cities" id="cities"></select>
+<p></p>
+
